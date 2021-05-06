@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <a class="nav-link home" data-alex="about" data-default-user="home" data-alon="contacts" href="">דף הבית</a>
+    <a class="nav-link about" href="">אודות</a>
+    <a class="nav-link contacts" href="">צור קשר</a>
+
+
+    <div class="about section">this is about content</div>
+    <div class="home section">This is home content</div>
+    <div class="contacts section">This is contacts content</div>
+
+
+    
+    
+    <script>
+
+        let navItems = document.querySelectorAll('.nav-link');
+        let sections =  document.querySelectorAll('.sections');
+
+        navItems.forEach( function(item){
+
+            // item = clicked link from navigation
+            item.addEventListener('click', function(event){
+                // item =  <a class="nav-link home" href="">דף הבית</a>
+                event.preventDefault();
+
+                // current item must be .home
+                // document.querySelector('');
+
+                sections.classList.toggle('active');
+            })
+        });
+
+    </script>
+
+
+</body>
+</html>

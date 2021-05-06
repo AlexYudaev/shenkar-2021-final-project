@@ -5607,6 +5607,7 @@ ul {
 }
 
 /* line 2101, /Applications/MAMP/htdocs/palash/cl/august 2019/202. Shop/202 shop html/sass/_product.scss */
+.s_product_text .like_us.is-active,
 .s_product_text .like_us:hover {
   background-color: #2f7dfc;
   color: #fff;
@@ -8289,4 +8290,38 @@ h6 {
   .footer_part .justify-content-around {
     justify-content: flex-start !important;
   }
+}
+
+.newsletter-popup{
+  position: fixed;
+  top:50%;
+  left:50%;
+  background-color: beige;
+  transform: translate(-50%, -50%);
+  padding: 30px;
+  border-radius: 20px;
+  z-index:100;
+  opacity: 0;
+  display: none;
+}
+
+
+.newsletter-popup.is-active{
+  opacity: 1;
+  display: block;
+}
+
+.newsletter-popup .close{
+  cursor: pointer;
+}
+
+.product_slider_img #vertical{
+    display: flex;
+}
+
+
+.nav,
+.elemnt,
+.block{
+  font-size:20px;
 }

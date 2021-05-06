@@ -61,11 +61,13 @@
                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                   <i class="ti-bag"></i>
                               </a>
-                              <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                   <div class="single_product">
   
                                   </div>
-                              </div> -->
+                              </div>
+
                           </div>
                           <a id="search_1" href=""><i class="ti-search"></i></a>
                       </div>
@@ -106,6 +108,12 @@
     <div class="container">
       <div class="row s_product_inner">
         <div class="col-lg-5">
+          <div class="main-image">
+            <div data-thumb="img/product_details/prodect_details_1.png">
+              <img src="img/product_details/prodect_details_1.png" />
+            </div>
+          </div>
+          
           <div class="product_slider_img">
             <div id="vertical">
               <div data-thumb="img/product_details/prodect_details_1.png">
@@ -126,7 +134,7 @@
         <div class="col-lg-5 offset-lg-1">
           <div class="s_product_text">
             <h3>Faded SkyBlu Denim Jeans</h3>
-            <h2>$149.99</h2>
+            <h2>$<span class="price">149.99</span></h2>
             <ul class="list">
               <li>
                 <a class="active" href="#">
@@ -141,7 +149,7 @@
             </p>
             <div class="card_area">
               <div class="product_count d-inline-block">
-                <span class="inumber-decrement"> <i class="ti-minus"></i></span>
+                <span class="number-decrement"> <i class="ti-minus"></i></span>
                 <input class="input-number" type="text" value="1" min="0" max="10">
                 <span class="number-increment"> <i class="ti-plus"></i></span>
               </div>
@@ -167,24 +175,24 @@
     <div class="container">
       <ul class="nav nav-tabs" id="myTab" role="tablist">
         <li class="nav-item">
-          <a class="nav-link active" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+          <a class="nav-link active" data-toggle="tab" data-tab=".description" href="#home" role="tab" aria-controls="home"
             aria-selected="true">Description</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
+          <a class="nav-link" data-toggle="tab" data-tab=".specification" href="#profile" role="tab" aria-controls="profile"
             aria-selected="false">Specification</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" data-toggle="tab" href="#contact" role="tab" aria-controls="contact"
+          <a class="nav-link" data-toggle="tab" data-tab=".coomments" href="#contact" role="tab" aria-controls="contact"
             aria-selected="false">Comments</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" data-toggle="tab" href="#review" role="tab" aria-controls="review"
+          <a class="nav-link" data-toggle="tab" data-tab=".reviews" href="#review" role="tab" aria-controls="review"
             aria-selected="false">Reviews</a>
         </li>
       </ul>
       <div class="tab-content" id="myTabContent">
-        <div class="tab-pane fade show active" role="tabpanel" aria-labelledby="home-tab">
+        <div class="tab-pane fade description show active" role="tabpanel" aria-labelledby="home-tab">
           <p>
             Beryl Cook is one of Britain’s most talented and amusing artists
             .Beryl’s pictures feature women of all shapes and sizes enjoying
@@ -215,7 +223,7 @@
             person creating less
           </p>
         </div>
-        <div class="tab-pane fade show active" role="tabpanel" aria-labelledby="profile-tab">
+        <div class="tab-pane fade specification show" role="tabpanel" aria-labelledby="profile-tab">
           <div class="table-responsive">
             <table class="table">
               <tbody>
@@ -287,7 +295,7 @@
             </table>
           </div>
         </div>
-        <div class="tab-pane fade show active" role="tabpanel" aria-labelledby="contact-tab">
+        <div class="tab-pane fade coomments show" role="tabpanel" aria-labelledby="contact-tab">
           <div class="row">
             <div class="col-lg-6">
               <div class="comment_list">
@@ -383,7 +391,7 @@
             </div>
           </div>
         </div>
-        <div class="tab-pane fade show active" role="tabpanel" aria-labelledby="review-tab">
+        <div class="tab-pane fade reviews show" role="tabpanel" aria-labelledby="review-tab">
           <div class="row">
             <div class="col-lg-6">
               <div class="row total_rate">
@@ -770,7 +778,23 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
   </footer>
   <!--::footer_part end::-->
 
+  <div class="newsletter-popup">
+    <div class="close">
+       x
+    </div>
+    <div class="title">
+        Newsletter
+    </div>
+
+    <div class="inputs">
+        <input type="text" id="mail" placeholder="Enter Your Email">
+        <input type="submit" value="Subscribe">
+    </div>
+</div>
+
   <script src="script.js"></script>
 </body>
 
 </html>
+
+
