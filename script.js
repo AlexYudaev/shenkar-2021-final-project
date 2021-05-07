@@ -1,3 +1,20 @@
+const Products = [
+    {},
+    {
+        productName : "Faded SkyBlu Denim Jeans", 
+        productPrice : 149.99, 
+        productImageSrc : "http://127.0.0.1:5500/img/product_details/prodect_details_1.png"
+    },
+    {
+        productName: "Long Sleeve TShirt", 
+        productPrice: 49.99, 
+        productImageSrc: "http://127.0.0.1:5500/img/category/category_2.png"
+    }
+]; //array with index
+//let products = {}; // object (key value)
+
+
+
 let filterNavigation = document.querySelectorAll('.arrival_filter_item .controls'); 
 let filterItems = document.querySelectorAll('.single_arrivel_item');
 
@@ -34,13 +51,15 @@ numberDecrement.addEventListener('click', function(){
 })
 
 
-let addToCartButton = document.querySelector('.add_to_cart .btn_3');
-addToCartButton.addEventListener('click', function(event){
+function addToCartItem(event){
     event.preventDefault();
+
+    let product = Products[addToCartButton.dataset.productId];
+
     let productCounter = document.querySelector('.product_count .input-number').value;
-    let productName = document.querySelector('.s_product_text h3').innerHTML;
-    let productPrice = parseFloat(document.querySelector('.s_product_text h2 span').innerHTML);
-    let productImageSrc = document.querySelector('.product_slider_img img').src;
+    let productName = product.productName; 
+    let productPrice = product.productPrice;
+    let productImageSrc = product.productImageSrc;
 
     //todo insert to cart
 
@@ -63,7 +82,9 @@ addToCartButton.addEventListener('click', function(event){
      `;
 
      singleProduct.innerHTML = singleProductHtml;
-})
+}
+let addToCartButton = document.querySelector('.add_to_cart .btn_3');
+addToCartButton.addEventListener('click', addToCartItem);
 
 
 let addToFavorites = document.querySelector('.add_to_cart .like_us');
@@ -95,8 +116,7 @@ productDescriptionNavItems.forEach( function(item){
     item.addEventListener('click', function(e){
             e.preventDefault(); //evenet 
             let descriptionClass = item.dataset.tab; // .description
-
-
+            
             item.classList.add('active');
             document.querySelector(descriptionClass).classList.add('active'); 
 
