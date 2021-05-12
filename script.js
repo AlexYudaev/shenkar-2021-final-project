@@ -1,18 +1,4 @@
-const Products = [
-    {},
-    {
-        productName : "Faded SkyBlu Denim Jeans", 
-        productPrice : 149.99, 
-        productImageSrc : "http://127.0.0.1:5500/img/product_details/prodect_details_1.png"
-    },
-    {
-        productName: "Long Sleeve TShirt", 
-        productPrice: 49.99, 
-        productImageSrc: "http://127.0.0.1:5500/img/category/category_2.png"
-    }
-]; //array with index
-//let products = {}; // object (key value)
-
+const ProductInCart = [1,3];
 
 
 let filterNavigation = document.querySelectorAll('.arrival_filter_item .controls'); 
@@ -50,41 +36,6 @@ numberDecrement.addEventListener('click', function(){
     productCounter.value = counter;
 })
 
-
-function addToCartItem(event){
-    event.preventDefault();
-
-    let product = Products[addToCartButton.dataset.productId];
-
-    let productCounter = document.querySelector('.product_count .input-number').value;
-    let productName = product.productName; 
-    let productPrice = product.productPrice;
-    let productImageSrc = product.productImageSrc;
-
-    //todo insert to cart
-
-
-    let singleProduct = document.querySelector('.single_product');
-
-
-     let singleProductHtml = `
-        <div class="single-product">
-        <div class="image">
-        <img src="${productImageSrc}">
-        </div>
-    
-        <div class="details">
-        <h3>${productName}</h3>
-        <h2>${productPrice}</h2> 
-        <p>${productPrice * productCounter}</p>
-        </div>
-    </div>
-     `;
-
-     singleProduct.innerHTML = singleProductHtml;
-}
-let addToCartButton = document.querySelector('.add_to_cart .btn_3');
-addToCartButton.addEventListener('click', addToCartItem);
 
 
 let addToFavorites = document.querySelector('.add_to_cart .like_us');
