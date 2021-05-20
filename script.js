@@ -1,4 +1,4 @@
-const ProductInCart = [1,3];
+const ProductInCart = [2,3];
 
 
 let filterNavigation = document.querySelectorAll('.arrival_filter_item .controls'); 
